@@ -1,3 +1,11 @@
+// 1. Install dependencies
+// 2. Import dependencies
+// 3. Setup webcam and canvas
+// 4. Define references to those
+// 5. Load bodypix
+// 6. Detect function
+// 7. Draw using drawMask
+
 import logo from './logo.svg';
 import './App.css';
 
