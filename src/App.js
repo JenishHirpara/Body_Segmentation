@@ -3,8 +3,8 @@
 // 3. Setup webcam and canvas DONE
 // 4. Define references to those DONE
 // 5. Load bodypix DONE
-// 6. Detect function
-// 7. Draw using drawMask
+// 6. Detect function DONE
+// 7. Draw using drawMask DONE
 
 import React, {useRef} from "react";
 // import logo from './logo.svg';
@@ -48,6 +48,16 @@ function App() {
       console.log(person);
 
       // Draw detections
+      const coloredPartImage = bodyPix.toColoredPartMask(person);
+
+      bodyPix.drawMask(
+        canvasRef.current, 
+        video, 
+        coloredPartImage, 
+        0.7, 
+        0, 
+        false,
+      );
     }
   }
 
