@@ -1,8 +1,8 @@
 // 1. Install dependencies DONE
 // 2. Import dependencies DONE
 // 3. Setup webcam and canvas DONE
-// 4. Define references to those
-// 5. Load bodypix
+// 4. Define references to those DONE
+// 5. Load bodypix DONE
 // 6. Detect function
 // 7. Draw using drawMask
 
@@ -14,6 +14,16 @@ import Webcam from "react-webcam";
 import './App.css';
 
 function App() {
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
+
+  const runBodySegment = async() => {
+    const net = await bodyPix.load();
+    console.log("BodyPix model loaded");
+  }
+
+  runBodySegment();
+
   return (
     <div className="App">
       <header className="App-header">
